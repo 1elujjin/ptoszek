@@ -6,22 +6,6 @@
   - https://github.com/jaczup/ptoszek.pl
   Original version (theannoyingsite.com): 
   - https://github.com/feross/TheAnnoyingSite.com/
-
-  Contact with me: https://jaczup.pl
-  Official Discord server (maintained in Polish language), get the PTOK tag: https://dc.ptoszek.pl
-
-  Contributors:
-    @jaczup - https://github.com/jaczup
-    @intexpression - https://github.com/intexpression
-    @dan64iel - https://github.com/dan64iel
-    @imzeme - https://github.com/imzeme
-    @GameShoot8050 - https://github.com/GameShoot8050
-    @wetraks -  https://github.com/wetraks
-    @cryblanka - https://github.com/cryblanka
-    @9fm - https://github.com/9fm
-    @MARECKIyt - https://github.com/MARECKIyt
-    @Hyd3r1 - https://github.com/Hyd3r1
-    @MariaWasNotAvailable - https://github.com/MariaWasNotAvailable
 */
 
 const SCREEN_WIDTH = window.screen.availWidth
@@ -62,43 +46,15 @@ const ART = [
 ]
 
 const SEARCHES = [
-  'jshop',
-  'ptoszek',
-  'ptak',
-  'kanarek',
-  'jaczup'
+  'norgates',
 ]
 
 const VIDEOS = [
   'media/videos/jaczup.mp4',
-  'media/videos/duck.mp4',
-  'media/videos/rickroll.mp4',
-  'media/videos/golomb.mp4',
-  'media/videos/mushbox.mp4',
-  'media/videos/clearmax.mp4',
-  'media/videos/freestrona.mp4',
-  'media/videos/ajhsdfhjasdbhfjasdfs.mp4',
-  'media/videos/v09044g40000cgr968jc77u1t2krb89g.mov',
-  'media/videos/intro.mp4',
-  'media/videos/szybkakaczka.mp4', // added by @dan64iel
-  'media/videos/kaczuszka.mp4', //added by @imzeme
-  'media/videos/gratulacje.mp4', //added by @GameShoot8050
-  'media/videos/puddi.mp4' //added by @MariaWasNotAvailable
 ]
 
 const FILE_DOWNLOADS = [
   'media/images/ptok.jpg',
-  'media/images/jaczup.jpg',
-  'media/images/jaczupme.jpg',
-  'media/images/ptoszek.jpg',
-  'media/images/ptakwspodniach.jpg',
-  'media/images/kichajacyptoszek.jpg',
-  'media/images/lubieptoszki.png',
-  'media/images/zimowyptoszek.jpeg', // added by @dan64iel
-  'media/images/zlyptok.jpeg', //added by @imzeme
-  'media/images/grubyptok.jpg', //added by @imzeme
-  'media/images/ptokzjajami.jpeg', //added by @MARECKIyt
-  'media/images/ptiszka.jpg',
 ]
 
 const PHRASES = [
@@ -120,7 +76,7 @@ const LOGOUT_SITES = {
   eBay: ['GET', 'https://signin.ebay.com/ws/eBayISAPI.dll?SignIn'],
   GitHub: ['GET', 'https://github.com/logout'],
   GMail: ['GET', 'https://mail.google.com/mail/?logout'],
-  Google: ['GET', 'https://www.google.com/accounts/Logout'], // works!
+  Google: ['GET', 'https://www.google.com/accounts/Logout'],
   Hulu: ['GET', 'https://secure.hulu.com/logout'],
   NetFlix: ['GET', 'https://www.netflix.com/Logout'],
   Skype: ['GET', 'https://secure.skype.com/account/logout'],
@@ -133,26 +89,68 @@ const LOGOUT_SITES = {
   Yahoo: ['GET', 'https://login.yahoo.com/config/login?.src=fpctx&logout=1&.direct=1&.done=https://www.yahoo.com/'],
   YouTube: ['POST', 'https://www.youtube.com', { action_logout: '1' }],
   JShop: ['GET', 'https://jshop.partners/panel/logout'],
-  Vimeo: ['GET', 'https://vimeo.com/log_out'], // added by @intexpression
-  Tumblr: ['GET', 'https://www.tumblr.com/logout'], // added by @intexpression
-  Allegro: ['GET', 'https://allegro.pl/wyloguj?origin_url=/'], // added by @intexpression
-  OnetMail: ['GET', 'https://authorisation.grupaonet.pl/logout.html?state=logout&client_id=poczta.onet.pl.front.onetapi.pl'], // added by @intexpression
-  InteriaMail: ['GET', 'https://poczta.interia.pl/logowanie/sso/logout'], // added by @intexpression
-  OLX: ['GET', 'https://www.olx.pl/account/logout'], // added by @intexpression
-  Roblox:  ['POST', 'https://auth.roblox.com/v2/logout'], // added by @cryblanka
-  ChatGPT: ['GET', 'https://chatgpt.com/auth/logout'], // added by @cryblanka
-  Guilded:  ['POST', 'https://www.guilded.gg/api/logout'], // added by @cryblanka
-  LinkedIn: ['GET', 'https://www.linkedin.com/m/logout/'], // added by @MARECKIyt
-  Pinterest: ['GET', 'https://www.pinterest.com/logout/'], // added by @MARECKIyt
-  Reddit: ['GET', 'https://www.reddit.com/logout'], // added by @MARECKIyt
-  Spotify: ['GET', 'https://www.spotify.com/logout/'], // added by @MARECKIyt
-  Microsoft: ['GET', 'https://login.microsoftonline.com/common/oauth2/logout'], // added by @MARECKIyt
-  Instagram: ['GET', 'https://www.instagram.com/accounts/logout/'], // added by @MARECKIyt
-  Trello: ['GET', 'https://trello.com/logout'], // added by @MARECKIyt
-  Baidu: ['GET', 'https://passport.baidu.com/?logout'], // added by @MARECKIyt
-  VK: ['GET', 'https://vk.com/exit'], // added by @MARECKIyt
-  StackOverflow: ['GET', 'https://stackoverflow.com/users/logout'], // added by @MARECKIyt
-  Asana: ['POST', 'https://app.asana.com/app/asana/-/logout'], // added by @Hyd3r1
+  Vimeo: ['GET', 'https://vimeo.com/log_out'], 
+  Tumblr: ['GET', 'https://www.tumblr.com/logout'],
+  Allegro: ['GET', 'https://allegro.pl/wyloguj?origin_url=/'],
+  OnetMail: ['GET', 'https://authorisation.grupaonet.pl/logout.html?state=logout&client_id=poczta.onet.pl.front.onetapi.pl'],
+  InteriaMail: ['GET', 'https://poczta.interia.pl/logowanie/sso/logout'],
+  OLX: ['GET', 'https://www.olx.pl/account/logout'],
+  Roblox:  ['POST', 'https://auth.roblox.com/v2/logout'],
+  ChatGPT: ['GET', 'https://chatgpt.com/auth/logout'],
+  Guilded:  ['POST', 'https://www.guilded.gg/api/logout'],
+  LinkedIn: ['GET', 'https://www.linkedin.com/m/logout/'],
+  Pinterest: ['GET', 'https://www.pinterest.com/logout/'],
+  Reddit: ['GET', 'https://www.reddit.com/logout'],
+  Spotify: ['GET', 'https://www.spotify.com/logout/'],
+  Microsoft: ['GET', 'https://login.microsoftonline.com/common/oauth2/logout'],
+  Instagram: ['GET', 'https://www.instagram.com/accounts/logout/'],
+  Trello: ['GET', 'https://trello.com/logout'],
+  Baidu: ['GET', 'https://passport.baidu.com/?logout'],
+  VK: ['GET', 'https://vk.com/exit'],
+  StackOverflow: ['GET', 'https://stackoverflow.com/users/logout'],
+  Asana: ['POST', 'https://app.asana.com/app/asana/-/logout'],
+  Twitter: ['POST', 'https://twitter.com/logout'],
+  X: ['POST', 'https://x.com/logout'],
+  Facebook: ['GET', 'https://www.facebook.com/logout.php'],
+  Twitch: ['POST', 'https://passport.twitch.tv/logout'],
+  TikTok: ['GET', 'https://www.tiktok.com/logout'],
+  Slack: ['GET', 'https://slack.com/logout'],
+  Notion: ['POST', 'https://www.notion.so/api/v3/logout'],
+  Zoom: ['GET', 'https://zoom.us/logout'],
+  Atlassian: ['GET', 'https://id.atlassian.com/logout'],
+  GitLab: ['POST', 'https://gitlab.com/users/sign_out'],
+  Bitbucket: ['GET', 'https://bitbucket.org/account/signout/'],
+  Docker: ['GET', 'https://hub.docker.com/logout'],
+  NPM: ['POST', 'https://www.npmjs.com/logout'],
+  Medium: ['GET', 'https://medium.com/m/callback/logout'],
+  Quora: ['POST', 'https://www.quora.com/logout'],
+  Patreon: ['GET', 'https://www.patreon.com/logout'],
+  Twilio: ['GET', 'https://www.twilio.com/logout'],
+  Salesforce: ['GET', 'https://login.salesforce.com/secur/logout.jsp'],
+  Adobe: ['GET', 'https://adobe.com/logout'],
+  PayPal: ['GET', 'https://www.paypal.com/signin/logout'],
+  eBay_UK: ['GET', 'https://signin.ebay.co.uk/ws/eBayISAPI.dll?SignIn'],
+  Etsy: ['GET', 'https://www.etsy.com/logout.php'],
+  Shopify: ['GET', 'https://accounts.shopify.com/logout'],
+  Evernote: ['GET', 'https://www.evernote.com/Logout.action'],
+  Dropbox_API: ['POST', 'https://api.dropboxapi.com/2/auth/token/revoke'],
+  Figma: ['POST', 'https://www.figma.com/api/logout'],
+  Canva: ['GET', 'https://www.canva.com/logout'],
+  Discourse: ['POST', 'https://meta.discourse.org/session/logout'],
+  SoundCloud_Alt: ['POST', 'https://api-v2.soundcloud.com/auth/session'],
+  Disqus: ['GET', 'https://disqus.com/logout/'],
+  DuckDuckGo: ['GET', 'https://duckduckgo.com/logout'],
+  ProtonMail: ['POST', 'https://mail.proton.me/api/auth/v4/logout'],
+  Fastmail: ['POST', 'https://www.fastmail.com/action/logout/'],
+  Zoho: ['GET', 'https://accounts.zoho.com/logout'],
+  EpicGames: ['GET', 'https://www.epicgames.com/id/logout'],
+  EA: ['GET', 'https://www.ea.com/logout'],
+  Blizzard: ['GET', 'https://account.battle.net/login/logout'],
+  RiotGames: ['POST', 'https://auth.riotgames.com/logout'],
+  Uplay: ['GET', 'https://connect.ubisoft.com/logout'],
+  Nintendo: ['POST', 'https://accounts.nintendo.com/logout'],
+  PlayStation: ['GET', 'https://id.sso.playstation.com/logout'],
+  Xbox: ['GET', 'https://login.live.com/oauth20_logout.srf'],
 }
 
 /**
